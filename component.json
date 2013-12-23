@@ -1,0 +1,29 @@
+{
+  "name": "kse-ui",
+  "repo": "https://github.com/ksanaforge/kse-ui",
+  "description": "hello world",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "kse-ui/main": "*",
+    "ksanaforge/result-list": "*",
+    "ksanaforge/query-input": "*",
+    "ksanaforge/search-worker": "*"
+  },
+  "development": {},
+  "paths": [
+    "../components",
+    "../kse-ui/components"
+  ],
+  "local": [
+    "facebook/react"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "index.css"
+  ]
+}
