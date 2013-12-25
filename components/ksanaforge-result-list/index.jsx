@@ -8,7 +8,12 @@ var Result=React.createClass({ //for each result item
 }) 
 
 var Resultlist = React.createClass({
+  shouldComponentUpdate:function(nextProps, nextState) {
+    //this is important , otherwise render will keep calling yase
+    return nextProps.result!=this.props.result; 
+  },  
   render: function() {
+    console.log('result render')
     return (
       <div ref="resultlist">
       {
