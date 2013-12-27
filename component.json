@@ -6,9 +6,11 @@
   "keywords": [],
   "dependencies": {
     "kse-ui/main": "*",
+    "brighthas/bootstrap":"*",
     "ksanaforge/result-list": "*",
     "ksanaforge/query-input": "*",
-    "ksanaforge/search-worker": "*"
+    "ksanaforge/search-worker": "*",
+    "ksanaforge/tabui": "*"
   },
   "development": {},
   "paths": [

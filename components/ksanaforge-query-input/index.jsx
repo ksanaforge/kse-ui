@@ -15,7 +15,7 @@ var QueryInput = React.createClass({
   render: function() {
     return ( // the input box
       <div>
-        <input ref="inputquery" onChange={this.onChange} defaultValue={this.props.query}></input>
+        <input ref="inputquery" onChange={this.onChange} defaultValue={this.props.query||""}></input>
       </div>
     );
   }

@@ -1,11 +1,15 @@
 var searchworker = React.createClass({
-  mixins:Require('react-mixins'), //introduce this.$yase
+  mixins:Require('kse-mixins'), //introduce this.$yase
+  propTypes: {
+       db: React.PropTypes.string.isRequired,
+       query: React.PropTypes.string.isRequired
+  },  
   shouldComponentUpdate:function(nextProps, nextState) {
     //this is important , otherwise render will keep calling yase
     return nextProps.db!=this.props.db || nextProps.query!=this.props.query; 
   },
   getDefaultProps:function() {
-    return { onResultReady:function(){} };
+    return { onResultReady:function(){} }; 
   },
   render: function() {
     //call to search engine
