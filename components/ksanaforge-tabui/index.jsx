@@ -66,7 +66,22 @@ var Tabui = React.createClass({
     var t=this.state.tabs.some(function(T){ 
       return T.active?goTab(T.id):false;
     })
-
+  },
+  newTab:function(T,idx) {
+    tabs=this.state.tabs;
+    idx=idx||tabs.length;
+    var tabexists=false;
+    for (var i in tabs) {
+      if (tabs[i].id==T.id) {
+        T.active=true;
+        tabs[i]=T;
+        tabexists=true;
+      } else {
+        tabs[i].active=false;  
+      }
+    }
+    if (!tabexists) tabs.splice(idx,0,T);
+    this.setState({"tabs":tabs});
   },
   componentDidMount:function() {
     this.goActiveTab()
